@@ -5,15 +5,16 @@ set -e
 
 source /root/functions.sh
 
-echo "Installing dhcpcd package without udev support"
+echo "Install dhcpcd package without udev support"
 aur_start
 aur_build dhcpcd-without-systemd
 aur_finish
 
-# Install additional PHP packages
+echo "Install and configure additional PHP packages"
 source /root/php.sh
 
-#source /root/adminer.sh
+echo "Download adminer"
+curl -L -sS -o /srv/http/adminer.php https://www.matthewgamble.net/files/adminer/adminer-${ADMINER_VERSION}.php
 
 # Cleanup
 pacman_cleanup
