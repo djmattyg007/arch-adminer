@@ -1,7 +1,7 @@
 FROM djmattyg007/arch-phpfpm:2017.02.13-1
 MAINTAINER djmattyg007
 
-ENV ADMINERIMAGE_VERSION=2017.02.13-1
+ENV ADMINERIMAGE_VERSION=2017.02.13-2
 
 # Add install bash script
 COPY setup/root/*.sh /root/
