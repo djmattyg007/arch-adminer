@@ -14,7 +14,7 @@ echo "Install and configure additional PHP packages"
 source /root/php.sh
 
 echo "Download adminer"
-curl -L -sS -o /srv/http/index.php https://www.matthewgamble.net/files/adminer/adminer-${ADMINER_VERSION}.php
+curl -L -sS -o /srv/http/adminer.php https://www.matthewgamble.net/files/adminer/adminer-${ADMINER_VERSION}.php
 
 # Cleanup
 pacman_cleanup
